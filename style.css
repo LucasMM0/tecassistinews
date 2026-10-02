@@ -1,0 +1,217 @@
+/* ========================================================
+   TecAssist News - CSS Universal e WCAG 2.1 AAA
+   ======================================================== */
+
+:root {
+  --bg-color: #0c0f14;
+  --surface-color: #141820;
+  --surface-border: #273142;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --accent: #f59e0b;
+  --accent-hover: #fbbf24;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Temas de Alto Contraste (WCAG 2.1 AAA) */
+body.theme-high-contrast {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+
+body.theme-high-contrast * {
+  background-color: transparent !important;
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
+}
+
+body.theme-high-contrast a,
+body.theme-high-contrast button {
+  color: #ffff00 !important;
+  text-decoration: underline !important;
+}
+
+/* Modo Dislexia */
+body.font-dyslexia {
+  font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif !important;
+  letter-spacing: 0.08em !important;
+  word-spacing: 0.16em !important;
+  line-height: 1.85 !important;
+}
+
+/* Foco Acessível para Navegação por Teclado */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Utilitários Básicos */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Barra Superior de Acessibilidade */
+.a11y-bar {
+  background: #090b0e;
+  border-bottom: 1px solid #1e2530;
+  padding: 8px 0;
+  font-size: 11px;
+}
+
+.a11y-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.a11y-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.a11y-btn {
+  background: #181f2a;
+  border: 1px solid #273142;
+  color: #e2e8f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.a11y-btn:hover {
+  background: #273142;
+}
+
+/* Header Principal */
+.main-header {
+  background: rgba(12, 15, 20, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--surface-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.main-header .container {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.main-nav {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #fff;
+}
+
+/* Grid de Matérias */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.article-card {
+  background: var(--surface-color);
+  border: 1px solid var(--surface-border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  border-color: #3b4759;
+}
+
+.article-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: #090d14;
+}
+
+.article-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.article-meta {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.article-title {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.article-summary {
+  font-size: 12px;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+/* Footer */
+.main-footer {
+  background: #090c10;
+  border-top: 1px solid var(--surface-border);
+  padding: 40px 0 20px;
+  margin-top: 60px;
+  font-size: 12px;
+  color: var(--text-muted);
+}

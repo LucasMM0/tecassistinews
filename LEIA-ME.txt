@@ -1,0 +1,22 @@
+# Instruções de Instalação no XAMPP — TecAssist News
+
+Para rodar o portal completo no seu computador com XAMPP:
+
+1. Copie todos os arquivos e pastas deste diretório para dentro da sua pasta `htdocs`:
+   - No Windows: `C:\xampp\htdocs\tecassist\`
+   - No Mac/Linux: `/Applications/XAMPP/htdocs/tecassist/` ou `/opt/lampp/htdocs/tecassist/`
+
+2. Inicie o Apache e o MySQL no painel de controle do XAMPP.
+
+3. Importe o banco de dados:
+   - Abra o navegador e acesse: `http://localhost/phpmyadmin/`
+   - Clique na aba "Importar" (ou aba "SQL") e execute o arquivo `database.sql`.
+   - O banco `tecassist_news` será criado com tabelas e matérias de exemplo.
+
+4. Crie o primeiro administrador:
+   - Acesse no navegador: `http://localhost/tecassist/criar-admin.php`
+   - Defina seu e-mail e senha de administrador.
+
+5. Pronto! Acesse o portal:
+   - Página inicial: `http://localhost/tecassist/`
+   - Painel CMS Admin: `http://localhost/tecassist/admin/`

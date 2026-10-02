@@ -1,0 +1,7 @@
+{
+  "name": "TecAssist News",
+  "description": "Portal de jornalismo digital focado em Tecnologia Assistiva com experiência imersiva de scrollytelling 3D, WCAG 2.1 AAA, leitor de áudio integrado, suporte a LIBRAS e CMS editorial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
